@@ -2,20 +2,60 @@
 
 ## Project Links
 
-- [add your github repo link]()
+- [add your github repo link](https://github.com/UsagiKazma/Project-2-React-Application/blob/master/project-worksheet.md)
 - [add your deployment link]()
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+My project is A Monster Hunter Hunter. Monster Data fetcher that Displays a monsters weakness weakspot and location.
 
 ## API
 
-Use this section to include info about the API you have chosen and a code snippet of the data that it returns and is required for your project. 
+```
+    useEffect(() => {
+    console.log("App - useEffect - [skillset]", skillset);
+    const skillsetURL = "https://mhw-db.com/monsters";
+    const makeAPICall = async () => {
+      const res = await fetch(skillsetURL);
+      const json = await res.json();
+      setSkillset(json);
+    };
+    makeAPICall();
+  }, []);
+```
 
 
 ```
-{data: {} }
+ {
+        "id": 23,
+        "type": "large",
+        "species": "brute wyvern",
+        "elements": [
+            "fire"
+        ],
+        "name": "Anjanath",
+        "description": "The Anjanath patrols the Ancient Forest, looking for its favorite meal, Aptonoth. This belligerent monster will attack anything without hesitation.",
+        "ailments": [
+            {
+                "id": 5,
+                "name": "Fireblight",
+                "description": "Fireblight causes damage over time, and negates regular health recovery.",
+                "recovery": {
+                    "actions": [
+                        "dodge"
+                    ],
+                    "items": [
+                        {
+                            "id": 7,
+                            "rarity": 2,
+                            "value": 120,
+                            "carryLimit": 10,
+                            "name": "Nulberry",
+                            "description": "A mysterious berry that cures various blights."
+                        }
+                    ]
+                },
+
 ```
 
 
@@ -32,13 +72,14 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP EXAMPLE
-- Find and use external api 
-- Render data on page 
-- Allow user to interact with the page
-
+- User can serach up the Stats on a monster
+- User can search up the Weakspots on a monster
+- User can serch up the location Areas of the Monster.
 #### PostMVP EXAMPLE
 
-- Add localStorage or firebase for storage
+-Visual indication of weakspots
+-Visual indication of Weaknesses
+-Visual indication of location its on
 
 ## Components
 ##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
@@ -47,9 +88,10 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 | Component | Description | 
 | --- | :---: |  
-| App | This will make the initial data pull and include React Router| 
-| Header | This will render the header include the nav | 
-| Footer | This will render the header include the nav | 
+| App | This Will Work Render all the info?| 
+| Monster Render| Will create the Ui for the monster handle the change state | 
+| MonsterInfo | will handle passing down the props  | 
+| MonsterWeakspot| Decide what Weakspots the monster will handle |
 
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
@@ -61,8 +103,9 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Total | H | 6hrs| 5hrs | 5hrs |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
+[Monster Hunter Api](https://mhw-db.com/monsters)
 
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
+
