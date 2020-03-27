@@ -63,8 +63,8 @@ My project is A Monster Hunter Hunter. Monster Data fetcher that Displays a mons
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-- [Wireframe Mobile](https://www.figma.com/file/J4Azftb3oJdtbvwnaM6GYu/Monster-Hunter-Armor-App?node-id=7%3A3)
-- [add link to your react architecture]()
+- [Wireframe](https://www.figma.com/file/J4Azftb3oJdtbvwnaM6GYu/Monster-Hunter-Armor-App?node-id=7%3A3)
+
 
 
 ### MVP/PostMVP - 5min
