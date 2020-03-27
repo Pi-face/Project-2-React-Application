@@ -2,7 +2,7 @@
 
 ## Project Links
 
-- [add your github repo link](https://github.com/UsagiKazma/Project-2-React-Application/blob/master/project-worksheet.md)
+- [Wireframe Mobile](https://github.com/UsagiKazma/Project-2-React-Application/blob/master/project-worksheet.md)
 - [add your deployment link]()
 
 ## Project Description
