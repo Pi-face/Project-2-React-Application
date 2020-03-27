@@ -72,14 +72,15 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP EXAMPLE
-- User's can search up the Stats on a monster
-- User's can search up the Weakspots on a monster
+- User's Get the Weakness and effective spot on monster
+- User's can search for whatever large monster they want
 - User's can search up the location Areas of the Monster.
 #### PostMVP EXAMPLE
 
--Visual indication of weakspots
--Visual indication of Weaknesses
--Visual indication of location its on
+-Add Responsive Styling to the weakness
+-Highlight Monster parts on hover
+
+
 
 ## Components
 ##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
@@ -89,9 +90,9 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Component | Description | 
 | --- | :---: |  
 | App | This Will Work Render all the info?| 
-| Monster Render| Will create the Ui for the monster handle the change state | 
-| MonsterInfo | will handle passing down the props  | 
-| MonsterWeakspot| Decide what Weakspots the monster will handle |
+| Monster Gallery| Will create the Ui for the monster handle the change state | 
+| Monster| will handle passing down the props  | 
+| MonsterElemental Weakness| Decide what Weakspots the monster will handle |
 
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
@@ -108,4 +109,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
+
+## React Architecture.
+[React Diagram](https://app.diagrams.net/#G1YmpgIYgGsW0efqIobi8RdogASCgMedyC)
 
