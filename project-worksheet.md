@@ -72,9 +72,9 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP EXAMPLE
-- User can serach up the Stats on a monster
-- User can search up the Weakspots on a monster
-- User can serch up the location Areas of the Monster.
+- User's can search up the Stats on a monster
+- User's can search up the Weakspots on a monster
+- User's can search up the location Areas of the Monster.
 #### PostMVP EXAMPLE
 
 -Visual indication of weakspots
