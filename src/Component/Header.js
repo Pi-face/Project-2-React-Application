@@ -1,7 +1,9 @@
-import React from 'react'
-import {useState,useEffect} from 'react'
+import React, { createContext } from 'react'
+import {useState,useEffect,useContext} from 'react'
 
 function Header(){
+
+  const seachValue = createContext()
 
   const [searchTerm, setSearchTerm] = React.useState("");
  
@@ -10,6 +12,7 @@ function Header(){
     setSearchTerm(e.target.value);
     
   };
+
 
   console.log('Header - [searchTerm]',searchTerm)
 

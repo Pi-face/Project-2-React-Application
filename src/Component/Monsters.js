@@ -1,9 +1,6 @@
 import React from 'react'
 import {useEffect,useState } from 'react';
 
-
-const monsterIcon = require('../monsters/Acidic_Glavenus_thumb.png')
-
 function Monsters(){
     //calling monster Data
     const [monster, setMonster] = useState([]);
