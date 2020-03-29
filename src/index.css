@@ -1,13 +1,27 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0px;
+  font-family: sans-serif;
+  background-color: rgba(255, 255, 255, 0.816);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header{
+  background-color:#21272B;
+  color: yellow;
+  padding: 5px;
+  text-align: center;
+  width: auto;
+  
+}
+
+.MonsterImages{
+  width: 160px;
+  height: 160px;
+}
+
+.bottom{
+  background-color:#21272B;
+  color: #21272B;
+  padding: 10px;
+  max-width: 100%;
 }
