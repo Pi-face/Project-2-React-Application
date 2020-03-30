@@ -1,36 +1,41 @@
-import React, { createContext } from 'react'
-import {useState,useEffect,useContext} from 'react'
+import React, { useState,useContext, createContext} from "react"
+import { Link } from "react-router-dom"
 
 function Header(){
 
-  const seachValue = createContext()
+    const [searchTerm, setSearchTerm] = React.useState("");
 
-  const [searchTerm, setSearchTerm] = React.useState("");
- 
+   
+    const handleChange = e => {
+       setSearchTerm(e.target.value);
+       
+     };
+   
+   
+     console.log('Header - [searchTerm]',searchTerm)
 
-  const handleChange = e => {
-    setSearchTerm(e.target.value);
-    
-  };
-
-
-  console.log('Header - [searchTerm]',searchTerm)
 
 
 
     return(
+      <Link to='/'>
         <div className='header'>
-        <h4>MHAPP</h4>
-          <form>  
-             <input
-             type='text'
-             placeholder='Search Monster'
-             onChange={handleChange}
-             value={searchTerm}
-             />
-          </form>
-        </div>
+      
+        <h4>MHAPPLOGO</h4>
+
+           <form>  
+              <input
+              type='text'
+              placeholder='Search Monster'
+              onChange={handleChange}
+              value={searchTerm}
+              />
+           </form>
+    </div>
+     </Link>
+        
     )
 }
 
-export default Header
+
+export default Header;

@@ -1,5 +1,7 @@
-import React from 'react'
-import {useEffect,useState } from 'react';
+import React, { useContext } from 'react'
+import {useEffect,useState} from 'react';
+import {Link} from 'react-router-dom'
+
 
 function Monsters(){
     //calling monster Data
@@ -27,26 +29,31 @@ function Monsters(){
 
  const monsterData = largeMonsters.map((monster,index)=>{
 
-     console.log('monsterData',index)
+    //  console.log('monsterData',monster)
 //Replaces all monster spaces with underscore
      let nameCheck = monster.name.replace (' ', '_',)
-     console.log('Monsters - nameCheck',nameCheck)
+    //  console.log('Monsters - nameCheck',nameCheck)
 
      const monsterIcon = require(`../monsters/${nameCheck}.png`)
 
+    
+
      
-     if(index){
+  
          return(
-            <div className='Monsters' key={index}>
+            <Link key={index}  to={`Monster/${monster.name}`}>
+            <div className='Monsters'>
                <img className='MonsterImages' src={monsterIcon} />
-               <h4>{monster.name}</h4>
+               <h4 className='mname'>{monster.name}</h4>
             </div>
+            </Link>
+        
          )  
-     }
+     
  } )
 
  return(
-     <h4>{monsterData}></h4>
+     <h4>{monsterData}</h4>
  )
 
 }
