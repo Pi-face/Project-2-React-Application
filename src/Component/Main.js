@@ -12,7 +12,7 @@ function Main(){
             <Route exact path="/" component={Monsters} />
             <Route
             path="/Monster/:name"
-            render={routerProps => <Monster {...routerProps}/>}
+            render={<Monster/>}
             />
 
      

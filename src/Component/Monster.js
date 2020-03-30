@@ -1,12 +1,11 @@
-import React, { useContext } from 'react'
-import {MonstersContext} from '../context/MonstersContext'
+import React from 'react';
+
 
 function Monster(){
-    const monsterData = useContext(MonstersContext)
-
+ 
     return(
     <>
-    <h4>{MonstersContext.name}</h4>
+    <h4></h4>
     </>
     )
 }
