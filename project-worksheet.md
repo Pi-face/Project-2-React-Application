@@ -72,7 +72,7 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP EXAMPLE
-- User's Get the Weakness and effective spot on monster
+- User's Get the Weakness for monster
 - User's can search for whatever large monster they want
 - User's can search up the location Areas of the Monster.
 #### PostMVP EXAMPLE
@@ -101,7 +101,8 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | --- | :---: |  :---: | :---: | :---: |
 |Create Mobile Design | H | 4hrs|  4hrs | 2hrs |
 | Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Creating Monster Gallery | H | 5hrs| 5hrs | est..|
+| Creating Monster Gallery | H | 5hrs| 5hrs | 3hr|
+| Creating Monster Detail Section|H|5hrs|4hr|est..|
 
 ## Additional Libraries
 [Monster Hunter Api](https://mhw-db.com/monsters)

@@ -28,9 +28,19 @@ body {
 
 
 .Monsters{
-  width: 50%;
+
+ 
+}
+
+
+.mname{
 
 
 }
 
+.detailimage{
+width: 50vw;
+height: 50vh;
+
+}
 
