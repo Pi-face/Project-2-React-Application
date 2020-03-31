@@ -1,19 +1,23 @@
 import React from 'react'
 import Monsters from './Monsters'
 import { Route, Switch, Redirect } from "react-router-dom"
-import Monster from './Monster'
+import Info from './Info'
+
 
 function Main(){
 
 
     return(
         <main>
-            <switch>
+            <Switch>
             <Route exact path="/" component={Monsters} />
-
+            <Route path='/Info/:id'
+             render={routerProps => <Info {...routerProps} />}/>
+            <Redirect to="/" />
+           
 
      
-            </switch>
+            </Switch>
         </main>
     )
 }
