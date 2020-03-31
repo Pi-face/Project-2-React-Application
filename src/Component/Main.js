@@ -10,10 +10,7 @@ function Main(){
         <main>
             <switch>
             <Route exact path="/" component={Monsters} />
-            <Route
-            path="/Monster/:name"
-            render={<Monster/>}
-            />
+
 
      
             </switch>

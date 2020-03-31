@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import React from 'react';
 import {useEffect,useState} from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 
 function Monsters(){
@@ -41,7 +41,7 @@ function Monsters(){
      
   
          return(
-            <Link key={index}  to={`Monster/${monster.name}`}>
+            <Link key={index}  to={`Monster/${monster.id}`}>
             <div className='Monsters'>
                <img className='MonsterImages' src={monsterIcon} />
                <h4 className='mname'>{monster.name}</h4>
