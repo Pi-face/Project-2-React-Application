@@ -21,7 +21,7 @@ function Header(){
       <Link to='/'>
         <div className='header'>
       
-        <h4>MHAPPLOGO</h4>
+        <h4>MH</h4>
 
            <form>  
               <input
