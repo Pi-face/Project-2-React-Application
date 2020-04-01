@@ -1,10 +1,13 @@
 import React from 'react'
-import {useEffect,useState,Link} from 'react'
+import {useEffect,useState} from 'react'
 import Header from './Component/Header'
 import Footer from './Component/Footer'
+import {Link, Switch, Route} from 'react-router-dom'
+import Monster from './Component/Monster'
+import Monsters from './Component/Monsters'
 
 
-function App(){
+function App(props){
 
     const [monster, setMonster] = useState([]);
 
@@ -21,49 +24,23 @@ function App(){
             makeApiCall()
         },[] )
 
-
-        const largeMonsters = monster.filter( (monster) =>{
-                 if(monster.type === 'large'){
-                     return monster
-                 }
-             })
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-const monsterData = largeMonsters.map((monster,index)=>{
-
-                     let nameCheck = monster.name.replace (' ', '_',)
-                
-                     const monsterIcon = require(`./monsters/${nameCheck}.png`)
-                
-                    
-                        return(
-                            // <Link key={index}  to={`Info/${monster.id}`}>
-                            <div className='Monsters'>
-                               <img className='MonsterImages' alt='Image Here' src={monsterIcon} />
-                               <h4 className='mname'>{monster.name}</h4>
-                            </div>
-                            // </Link>
-                        
-                         )  
-                     
-                 } )
-                
+                 
                  return(
                      <div className='App'>
-                     <Header/>
-                     <h4>{monsterData}</h4>
+                     <Header/>   
+                     <Switch>
+                     <Route exact path = '/' render={props => <Monsters {...props} monsters={monster} />}/>
+                     <Route path='/Monster/:id'
+                     render={props => <Monster {...props } monsters={monster}/>}/>
+                  
+                    
+                     </Switch>
                      <Footer/>
                      </div>
                      
                  )
 
-
-
-
 }
-
-
-
 
 
 export default App
