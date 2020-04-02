@@ -3,21 +3,17 @@ import React from 'react'
 function Monster(props){
     console.log('Monster - props',props)
 
-    const monsterDetail = props.monsters.filter((monster)=>{
-        // console.log('monsterDetail - monster',monster)
+    const filteredMonsters = props.monsters.filter((monster)=>
+    monster.id == props.match.params.id)
 
-       if(monster.id === props.match.params.id){
-           return(
-              <h4>{monster.name}</h4>
-            )
-       }
-    }
-   
-    )
+    // const park = props.parks.filter(park => park.name === props.match.params.name)
+    console.log('filteredMonsters',filteredMonsters)
 
+    
     return(
-    <h4>{monsterDetail}</h4>
+    <h4>{}</h4>
     )
+
 }
 
 export default Monster

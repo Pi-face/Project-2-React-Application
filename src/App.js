@@ -31,7 +31,7 @@ function App(props){
                      <Switch>
                      <Route exact path = '/' render={props => <Monsters {...props} monsters={monster} />}/>
                      <Route path='/Monster/:id'
-                     render={props => <Monster {...props } monsters={monster}/>}/>
+                     render={props => <Monster {...props} monsters={monster}/>}/>
                   
                     
                      </Switch>
