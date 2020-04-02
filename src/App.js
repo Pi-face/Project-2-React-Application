@@ -29,9 +29,9 @@ function App(props){
                      <div className='App'>
                      <Header/>   
                      <Switch>
-                     <Route exact path = '/' render={props => <Monsters {...props} monsters={monster} />}/>
-                     <Route path='/Monster/:id'
+                     <Route path='/Monster/:name'
                      render={props => <Monster {...props} monsters={monster}/>}/>
+                     <Route exact path = '/' render={props => <Monsters monsters={monster} {...props} />}/>
                   
                     
                      </Switch>
