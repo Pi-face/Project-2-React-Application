@@ -1,15 +1,17 @@
 import React, {useState} from "react"
 import { Link } from "react-router-dom"
 
-function Header(){
+function Header(props){
 
     const [searchTerm, setSearchTerm] = React.useState("");
 
    
     const handleChange = e => {
        setSearchTerm(e.target.value);
-       
      };
+     const handleSubmit = () => {
+         props.handleNameFromMonsters(searchTerm)
+     }
    
    
      console.log('Header - [searchTerm]',searchTerm)
@@ -30,6 +32,7 @@ function Header(){
               onChange={handleChange}
               value={searchTerm}
               />
+              <button className='button' onClick={handleSubmit}></button> 
            </form>
     </div>
      </Link>

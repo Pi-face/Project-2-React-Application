@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 
 function Monsters(props){
 // console.log('MONSTERS - props',props)
+const [inputName, setInputName] = useState('')
 
 const largeMonsters = props.monsters.filter( (monster) =>{
     if(monster.type === 'large'){
@@ -10,17 +11,18 @@ const largeMonsters = props.monsters.filter( (monster) =>{
     }
 })
 // console.log('MONSTERS - LARGEMONSTERS',largeMonsters)
+const handleSearch = monsterName => {
+    setInputName(monsterName)
+}
+
 
 
 const monsterGallery = largeMonsters.map((monster,index)=>{
-// console.log('MONSTERGALLERY- monster',monster)
-
+    
 let nameCheck = monster.name.replace (' ', '_',)
-// console.log('NAMECHECK',nameCheck)
 
 const monsterIcon = require(`../monsters/${nameCheck}.png`)
-                    
-                        
+              
         return(
         <Link key={index}  to={`/Monster/${monster.name}`}>
         <div className='Monsters'>
@@ -31,9 +33,43 @@ const monsterIcon = require(`../monsters/${nameCheck}.png`)
                          
 } )
 
-return(
-    <h4>{monsterGallery}</h4>
-)
+
+if(inputName){
+    const monsterGallery = largeMonsters.map((monster,index)=>{
+    
+        let nameCheck = monster.name.replace (' ', '_',)
+        
+        const monsterIcon = require(`../monsters/${nameCheck}.png`)
+                      
+                return(
+                <Link key={index}  to={`/Monster/${monster.name}`}>
+                <div className='Monsters'>
+                <img className='MonsterImages' alt='Image Here' src={monsterIcon} />
+                <h4 className='mname'>{monster.name}</h4>
+                </div>
+                </Link>  )  
+                                 
+        } )
+
+
+
+
+}
+
+
+else{
+    
+    return(
+        <h4>{monsterGallery}</h4>
+    )
+
+}
+
+
+
+
+
+
 
 
 }
