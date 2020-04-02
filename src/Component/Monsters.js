@@ -42,7 +42,7 @@ if(inputName){
         const monsterIcon = require(`../monsters/${nameCheck}.png`)
                       
                 return(
-                <Link key={index}  to={`/Monster/${monster.name}`}>
+                <Link className='mname' key={index}  to={`/Monster/${monster.name}`}>
                 <div className='Monsters'>
                 <img className='MonsterImages' alt='Image Here' src={monsterIcon} />
                 <h4 className='mname'>{monster.name}</h4>

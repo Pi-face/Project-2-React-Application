@@ -35,6 +35,10 @@ text-align: center;
 
 .mname{
 text-align: center;
+font-family: 'Righteous', cursive;
+font-size: 20px;
+color: #000;
+text-decoration: none;
 
 }
 
@@ -62,4 +66,18 @@ main{
 
 .monsterInfo{
   text-align: center;
+  font-family: 'Righteous', cursive;
+  justify-content: center;
+
 }
+
+Link{
+  text-decoration: none;
+}
+
+Route{
+  text-decoration: none;
+}
+
+
+

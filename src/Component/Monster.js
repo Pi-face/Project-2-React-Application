@@ -32,7 +32,7 @@ const Monster = (props) =>{
                   }
               )
 
-              let nameCheck = filteredMonsters && filteredMonsters.name.replace (' ', '_',)
+              let nameCheck = filteredMonsters && filteredMonsters.name.replace(' ', '_')
               const monsterIcon = require(`../monsters/${nameCheck}.png`)
 
             return(
