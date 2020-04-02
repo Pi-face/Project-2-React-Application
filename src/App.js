@@ -27,7 +27,8 @@ function App(props){
                  
                  return(
                      <div className='App'>
-                     <Header/>   
+                     <Header/>
+                     <main>   
                      <Switch>
                      <Route path='/Monster/:name'
                      render={props => <Monster {...props} monsters={monster}/>}/>
@@ -35,6 +36,7 @@ function App(props){
                   
                     
                      </Switch>
+                     </main>
                      <Footer/>
                      </div>
                      
