@@ -79,7 +79,13 @@ Route{
   text-decoration: none;
 }
 
+.inputSearch{
+text-align: center;
 
+}
 
+.title{
+  width: 150px;
+}
 
 

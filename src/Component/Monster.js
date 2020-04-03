@@ -3,14 +3,11 @@ import {useState} from 'react'
 
 const Monster = (props) =>{
 
-    console.log('Monster - props',props)
     const [monsterData,setmonsterData] = useState([]);
 
     if(props? true: false){
         const filteredMonsters = props.monsters.filter((monster)=>monster.name === props.match.params.name)[0]
     
-              console.log('FILTERED MONSTERS',filteredMonsters)
-
               const weakness = filteredMonsters && filteredMonsters.weaknesses.map(
                   (weakness)=>{
                       if(weakness.stars >= 2){
@@ -21,8 +18,7 @@ const Monster = (props) =>{
 
               const location = filteredMonsters && filteredMonsters.locations.map(
                   (location)=>{
-                    //   console.log('Location',location.zoneCount)
-                    //   console.log('Location Name',location.name)
+
                       return(
                          <div className='locations'>
                            <h4>{location.name}</h4>

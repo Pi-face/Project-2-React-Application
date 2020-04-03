@@ -11,7 +11,6 @@ function App(props){
 
     const [monster, setMonster] = useState([]);
 
-
         useEffect(()=>{
             const monsterUrl = 'https://mhw-db.com/monsters';
             const makeApiCall = async() =>{
@@ -23,11 +22,9 @@ function App(props){
             }
             makeApiCall()
         },[] )
-
           
-                  const [searchTerm, setSearchTerm] = React.useState("");
+                  const [searchTerm, setSearchTerm] = React.useState("")
 
- 
                   const handleChange = e => {
                   setSearchTerm(e.target.value);
                  };
@@ -35,24 +32,25 @@ function App(props){
                  
                  return(
                      <div className='App'>
-                     <Header/>
-                     <main>
-                     <form>  
-                     <input
-                     type='text'
-                     placeholder='Search Monster'
-                     onChange={handleChange}
-                     value={searchTerm}
-                     />
-                     </form>   
-                     <Switch>
-                     <Route path='/Monster/:name'
-                     render={props => <Monster {...props} monsters={monster}/>}/>
-                     <Route exact path = '/' render={props => <Monsters monsters={monster} searchTerm={searchTerm} {...props} />}/>
+                         <Header/>
+                           <main>
+                            <div>
+                              <form className='inputSearch'>  
+                                  <input
+                                  type='text'
+                                  placeholder='Search Monster'
+                                  onChange={handleChange}
+                                  value={searchTerm}
+                                  />
+                              </form>
+                            </div>   
+                              <Switch>
+                                  <Route path='/Monster/:name'
+                                   render={props => <Monster {...props} monsters={monster}/>}/>
+                                  <Route exact path = '/' render={props => <Monsters monsters={monster} searchTerm={searchTerm} {...props} />}/>
                   
-                    
-                     </Switch>
-                     </main>
+                              </Switch>
+                          </main>
                      <Footer/>
                      </div>
                      
