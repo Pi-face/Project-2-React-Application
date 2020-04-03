@@ -37,13 +37,18 @@ const Monster = (props) =>{
 
             return(
             <div className='monsterInfo'>
-              <img className='MonsterImages' alt='Image Here' src={monsterIcon} />
-              <h2>{filteredMonsters && filteredMonsters.name}</h2>
-              <p>{filteredMonsters && filteredMonsters.description}</p>
-
-                <h4>{location}</h4>
-            <h3>Weakness</h3>
-                <h4>{weakness}</h4>
+                   <img className='MonsterImages' alt='Image Here' src={monsterIcon} />
+                   <h2 className='monsterName'>{filteredMonsters && filteredMonsters.name}</h2>
+            <div className='description'>
+                    <p>{filteredMonsters && filteredMonsters.description}</p>
+                </div>
+            <div className='location'>
+                     <h4>{location}</h4>
+                </div>
+            <div className='weak'>
+                     <h3>Weakness</h3>
+                     <h4>{weakness}</h4>
+                </div>
             </div>
             )
            

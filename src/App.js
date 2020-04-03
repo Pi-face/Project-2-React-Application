@@ -24,15 +24,31 @@ function App(props){
             makeApiCall()
         },[] )
 
+          
+                  const [searchTerm, setSearchTerm] = React.useState("");
+
+ 
+                  const handleChange = e => {
+                  setSearchTerm(e.target.value);
+                 };
+
                  
                  return(
                      <div className='App'>
                      <Header/>
-                     <main>   
+                     <main>
+                     <form>  
+                     <input
+                     type='text'
+                     placeholder='Search Monster'
+                     onChange={handleChange}
+                     value={searchTerm}
+                     />
+                     </form>   
                      <Switch>
                      <Route path='/Monster/:name'
                      render={props => <Monster {...props} monsters={monster}/>}/>
-                     <Route exact path = '/' render={props => <Monsters monsters={monster} {...props} />}/>
+                     <Route exact path = '/' render={props => <Monsters monsters={monster} searchTerm={searchTerm} {...props} />}/>
                   
                     
                      </Switch>
