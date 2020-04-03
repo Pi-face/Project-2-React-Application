@@ -28,12 +28,12 @@ function App(props){
                   const handleChange = e => {
                   setSearchTerm(e.target.value);
                  };
-
+                  console.log('[SearchTerm]',searchTerm)
                  
                  return(
                      <div className='App'>
                          <Header/>
-                           <main>
+                           <main className='wrapper'>
                             <div>
                               <form className='inputSearch'>  
                                   <input

@@ -15,7 +15,9 @@ const largeMonsters = props.monsters.filter( (monster) =>{
 // if(monster.nametoLowerCase().includes(props.searchTerm))
 
 const monsterGallery = largeMonsters.map((monster,index)=>{
-if(monster.name.toLowerCase().includes(props.searchTerm)){    
+
+if(monster.name.toLowerCase().includes(props.searchTerm)){   
+     
 let nameCheck = monster.name.replace (' ', '_',)
 
 const monsterIcon = require(`../monsters/${nameCheck}.png`)
