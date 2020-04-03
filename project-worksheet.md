@@ -102,15 +102,37 @@ Time frames are also key in the development cycle.  You have limited time to cod
 |Create Mobile Design | H | 4hrs|  4hrs | 2hrs |
 | Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
 | Creating Monster Gallery | H | 5hrs| 5hrs | 3hr|
-| Creating Monster Detail Section|H|5hrs|4hr|est..|
+| Creating Monster Detail Section|H|5hrs|4hr|8hrs|
+
 
 ## Additional Libraries
 [Monster Hunter Api](https://mhw-db.com/monsters)
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
+```
+const monsterGallery = largeMonsters.map((monster,index)=>{
+if(monster.name.toLowerCase().includes(props.searchTerm)){    
+let nameCheck = monster.name.replace (' ', '_',)
 
+const monsterIcon = require(`../monsters/${nameCheck}.png`)
+              
+        return(
+        <Link key={index}  to={`/Monster/${monster.name}`}>
+        <div className='Monsters'>
+        <img className='MonsterImages' alt='Image Here' src={monsterIcon} />
+        <h4 className='mname'>{monster.name}</h4>
+        </div>
+        </Link>  )  
+                         
+} })
+
+    return(
+        <h4>{monsterGallery}</h4>
+    )
+}
+```
+The work that went into just rendering the images then filtering them was enough for me to be proud of this code
 ## React Architecture.
 
 [React Diagram](https://app.diagrams.net/#G1YmpgIYgGsW0efqIobi8RdogASCgMedyC)
